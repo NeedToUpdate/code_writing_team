@@ -1,0 +1,32 @@
+# mcp_agent.config.yaml
+execution_engine: asyncio
+logger:
+  transports: [console]
+  level: info
+
+anthropic:
+  default_model: claude-3-7-sonnet-20250219
+
+mcp:
+  servers:
+    fetch:
+      command: "uvx"
+      args: ["mcp-server-fetch"]
+    filesystem:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-filesystem", "."]
+    # git:
+    #   command: "git-mcp-server"
+    #   args: [""]
+    github:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-github"]
+    npm:
+      command: "/mcp_npm/build/index.js"
+      args: [""]
+    jira:
+      command: "uvx"
+      args: ["mcp-atlassian"]
+    confluence:
+      command: "uvx"
+      args: ["mcp-atlassian"]

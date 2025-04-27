@@ -1,0 +1,13 @@
+services:
+  code-writing-team:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-CodeWritingAgent}
+      - GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-codewriting@example.com}
+      - GIT_MCP_BASE_DIR=${GIT_MCP_BASE_DIR:-/app}
+    command: python main.py ${TICKET_ID:-AI-7}
+    # Add container networking for accessing MCP servers from within the main container
