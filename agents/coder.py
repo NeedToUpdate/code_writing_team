@@ -54,7 +54,7 @@ For significant code changes, ask for human confirmation before proceeding.
         server_names=[
             "filesystem",
             "fetch",
-            "git",
+            "github",
         ],  # Needs filesystem access to read/write code
     )
 

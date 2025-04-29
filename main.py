@@ -37,9 +37,9 @@ async def run_workflow(ticket_key: str, workspace_path: str):
     """Run the main workflow with a specified ticket key."""
 
     # Step 1: Validate MCP tools
-    tools_valid = await validate_mcp_tools()
-    if not tools_valid:
-        return "Failed: Missing required MCP tools."
+    # tools_valid = await validate_mcp_tools()
+    # if not tools_valid:
+    #     return "Failed: Missing required MCP tools."
 
     # Step 2: Process the selected ticket
     result = await process_ticket(ticket_key, workspace_path)

@@ -52,7 +52,7 @@ IMPORTANT: if you are given a list of folders from the repos folder, you should 
         server_names=[
             "jira",
             "filesystem",
-            "git",
+            "github",
         ],  # Needs access to Jira and filesystem
         human_input_callback=None,
     )
