@@ -1,7 +1,7 @@
 import re
 from agents.code_reviewer import create_code_reviewer_agent
 from agents.coder import create_coder_agent
-from agents.task_organizer import create_task_organizer_agent
+from agents.project_manager import create_task_organizer_agent
 from utils.token_savers import get_repo_folder, get_task_file_prompt
 from mcp_agent.workflows.llm.augmented_llm import RequestParams
 from workflows.check_ticket_completed import check_ticket_completed

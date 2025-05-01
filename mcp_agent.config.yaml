@@ -2,7 +2,7 @@
 execution_engine: asyncio
 logger:
   transports: [console]
-  level: info
+  level: debug
 
 anthropic:
   default_model: claude-3-7-sonnet-20250219
@@ -30,3 +30,12 @@ mcp:
     confluence:
       command: "uvx"
       args: ["mcp-atlassian"]
+    playwright:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/playwright-mcp-server"]
+    brave:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-brave-search"]
+    sequentialthinking:
+      command: "npx"
+      args: ["-y", "@modelcontextprotocol/server-sequential-thinking"]
