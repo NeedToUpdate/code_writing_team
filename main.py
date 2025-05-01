@@ -189,16 +189,13 @@ async def main():
         task_slug = task_json.get("task_slug", "unnamed-task")
 
         final_prompt = f"""
-        Danny Ocean has assembled a specialized team for the following mission:
-
+        The user has provided the following task to the team:
         {args.task}
-
-        Each team member has been carefully selected and given a specific role:
+        The leadership team has assigned a few team members, and given them the following goals to collectively work on the task:
         {agent_prompts}
-        
-        Mission codename: {task_slug} 
-        The team board is at ./board/{task_slug}.md
-        The mission notes are at ./notes/{task_slug}.md
+        The task slug is: {task_json['task_slug']}, 
+        the board is at ./board/{task_json['task_slug']}.md
+        the notes are at ./notes/{task_json['task_slug']}.md
 
         If you have a project manager, they will be in charge of the board, ask them for tasks to hand out to the team, and keep them updated on the progress of the tasks..
         I fyou have a someone with ideas, make sure they reply with ideas to you to share with the team.
